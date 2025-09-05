@@ -1,10 +1,10 @@
-# AlfaDev Astro Starter
+# LetsCovene Clone
 ![https://astro.build/](https://img.shields.io/badge/astro-4.16.9-orange?style=flat&logo=astro&logoColor=orange&link=https%3A%2F%2Fastro.build%2F)
 ![https://www.typescriptlang.org/](https://img.shields.io/badge/typescript-5.6.3-blue?style=flat&logo=typescript&link=https%3A%2F%2Fwww.typescriptlang.org%2F)
 ![https://tailwindcss.com/](https://img.shields.io/badge/tailwind-3.4.14-cyan?style=flat&logo=tailwindcss&link=https%3A%2F%2Ftailwindcss.com%2F)
 
 
-**An Astro Starter** 🛠️ - *batteries-included* - designed for content-driven pages like portfolios, landing pages, showcases, and more.
+🛠️ - *batteries-included* - designed for content-driven pages like portfolios, landing pages, showcases, and more.
 
 With a focus on simplicity, speed, and developer happiness, this starter helps you skip the repetitive boilerplate setup and dive straight into creating.  
 
@@ -22,9 +22,6 @@ Our goals are:
 
 
 ## ✨ Features
-
-Why choose **alfadev-astro-starter**?
-
 The starter is designed to be **the less intrusive as possible**, providing you with the tools and guidelines needed to focus on what's important, and with the minimal amount of code to get you started, because **you don't want another template that you have to spend hours removing unnecessary code**.
 
 - **Simple:** Lightweight and easy to use. No unnecessary complexity.
@@ -47,8 +44,8 @@ The starter is designed to be **the less intrusive as possible**, providing you 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/diego-alfadev/alfadev-astro.git
-   cd alfadev-astro
+   git clone https://github.com/dawapaljor/letsconvene.git
+   cd letsconvene
    ```
 
 2. **Install dependencies:**
