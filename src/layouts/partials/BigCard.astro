@@ -1,0 +1,129 @@
+---
+import LinkButton from "@/components/LinkButton.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import FeatherIcon from "@/components/react/FeatherIcon";
+
+const {
+  title,
+  description,
+  button,
+} = Astro.props;
+---
+
+<section class="px-5 py-20 xl:py-[120px]">
+  <div class="container">
+    <div class="bg-surface shadow row justify-center rounded-2xl px-[30px] pb-[75px] pt-16">
+      <div class="lg:col-11">
+        <div class="row">
+          <div class="lg:col-7">
+            <h2 class="h1 text-text" set:html={markdownify(title)}/>
+            {button && (
+              <button
+                class={`btn${button.color ? "-" + button.color : ""}${button.mode === "outline" ? "-outline" : ""} me-4 mb-4 mt-8`}
+                data-modal-target="popup-modal"
+                data-modal-toggle="popup-modal"
+                aria-disabled={button.disabled}
+              >
+                {button.icon && (
+                  <FeatherIcon
+                    name={button.icon}
+                    size={20}
+                    client:load
+                    className={`${button.label ? "mr-4" : "null"}`}
+                  />
+                )}
+                {button.label}
+              </button>
+            )}
+          </div>
+          <div class="mt-8 lg:col-5 lg:mt-0">
+            <p class="text-text" set:html={markdownify(description)}/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative w-full h-full screen-h-full max-h-screen max-h-xl ">
+          <div class="relative bg-white rounded-lg shadow-sm dark:bg-background">
+              <button type="button" class="absolute top-3 end-2.5 text-gray-400  hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center  dark:hover:text-white" data-modal-hide="popup-modal">
+                  <svg class="w-10 h-10 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+              </button>
+
+              <div class=" md:p-5   p-20 flex justify-center">
+                <div class="max-w-screen-xl">
+                  <h2 class=" text-4xl font-extrabold text-accent dark:accent text-center py-10">For your Organization</h2>
+                  <div class=" text-slate-900 dark:text-white px-20">
+                    <p>We offer customizations of Convene to suit your organization’s needs. For the first year, the fee is $9500 (includes setup fee). After the first year, there is a $300 monthly fee ($3000 if paid annually - two months free). Note that we also have discounts for non-profits.</p>
+                    <h3 class="text-xl pt-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                      </svg>
+                      Paid Service includes</h3>
+                    <p class="pl-8">Custom branding</p>
+                    <p class="pl-8">Logo,color scheme, hosting under your website domain</p>
+                  <h3 class="text-xl pt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 inline">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    Server Setup</h3>
+                    <p class="pl-8">Deploy on your cloud server or let us host it. You can select your hosting region.</p>
+                  <h3 class="text-xl pt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                  </svg>
+                  Data retention policy for your organisation</h3>
+                  <h3 class="text-xl pt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 inline">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    99.99% uptime Service Level Agreement (SLA) for cloud</h3>
+                  <h3 class="text-xl pt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-6 inline">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    One day business support SLA</h3>
+                  </div>
+                  <div class="px-20 my-4">
+                    <p class="bg-surface/20 p-5 text-center rounded-md">Want to know more? Contact us at sales@letsconvene.im.</p>
+                  <center><button class="bg-accent me-4 mb-4 mt-8 p-5 rounded-full text-white dark:text-white">Send an Email</button></center>
+                  </div>
+                </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<script>
+  import { Modal } from 'flowbite';
+  
+  // Initialize the modal
+  const $modalElement = document.querySelector('#popup-modal') as HTMLElement;
+  if ($modalElement) {
+    const modal = new Modal($modalElement);
+    
+    // Add event listeners for the toggle buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      const $modalToggleButtons = document.querySelectorAll('[data-modal-toggle="popup-modal"]');
+      const $modalHideButtons = document.querySelectorAll('[data-modal-hide="popup-modal"]');
+      
+      $modalToggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          modal.show();
+        });
+      });
+      
+      $modalHideButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          modal.hide();
+        });
+      });
+    });
+  }
+</script>

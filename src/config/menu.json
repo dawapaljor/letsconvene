@@ -1,0 +1,33 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+
+    {
+      "name": "Pages",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Changelog",
+          "url": "/changelog"
+        }
+
+      
+      ]
+    }
+  ],
+
+  "footer": [
+    {
+      "name": "Source Keanu Engine",
+      "url": "https://keanu.im/"
+    },
+    {
+      "name": "Guardian Project",
+      "url": "https://guardianproject.info/"
+    }
+  ]
+}

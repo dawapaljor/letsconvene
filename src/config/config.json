@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "Convene",
+    "base_url": "https://letsconvene.im/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.ico",
+    "logo": "/images/logo.png",
+    "logo_width": "47",
+    "logo_height": "47",
+    "logo_text": "Convene",
+    "logo_tagline": "Chat for everyone"
+  },
+
+  "params": {
+    "footer_description": "Convene is powered by the free and open source Keanu Engine. Developed by Guardian Project & designed by Okthanks.",
+    "email": "info@letsconvene.im",
+    "location": "Somewhere on Earth, where the Wi-Fi is decent and the coffee is strong.",
+    "phone": "",
+    "contact_form_action": "#",
+    "copyright": "2025 Convene. All rights reserved."
+},
+
+  "metadata": {
+    "meta_author": "",
+    "meta_image": "/images/logo.png",
+    "meta_description": "",
+    "meta_keywords": ["secure chat", "convene", "static site generator","matrix"],
+    "meta_application_name": "LetsConvene"
+  }
+}
