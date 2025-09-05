@@ -4,6 +4,9 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const about = await getEntry("about", "index");
+if (!about) {
+  throw new Error("About page not found");
+}
 const page_data = {
   ...about.data,
   content: about.body,

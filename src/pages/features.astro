@@ -4,6 +4,9 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const features = await getEntry("features", "index");
+if (!features) {
+  throw new Error("Features page not found");
+}
 const { Content } = await features.render();
 ---
 

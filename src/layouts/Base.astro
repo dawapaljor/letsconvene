@@ -11,7 +11,7 @@ import { AstroFont } from "astro-font";
 import { ViewTransitions } from "astro:transitions";
 import { getEntry } from "astro:content";
 import type { PageType } from "@/content/page.types";
-import type { ContentEntryMap } from "astro:content";
+import type { ContentCollectionKey, ContentEntryMap } from "astro:content";
 
 const GTAG = import.meta.env.GTAG_ID
 
@@ -41,7 +41,7 @@ export interface Props {
    *
    * @see PageType
    */
-  entry_keys?: [keyof ContentEntryMap, string];
+  entry_keys?: [string, string];
   /**
    * Override <title> og:title and twitter:title
    * @default config.site.title
@@ -86,8 +86,8 @@ const {
 let page: PageType | undefined = undefined;
 
 if (entry_keys) {
-  const page_entry = await getEntry(...entry_keys);
-  if (page_entry) {
+  const page_entry = await (getEntry as any)(entry_keys[0], entry_keys[1]);
+  if (page_entry && 'data' in page_entry) {
     page = page_entry.data as PageType;
   }
 }

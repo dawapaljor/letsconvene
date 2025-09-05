@@ -5,6 +5,9 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const entry = await getEntry("contact", "index");
+if (!entry) {
+  throw new Error("Contact page not found");
+}
 const { contact_form_action } = config.params;
 ---
 

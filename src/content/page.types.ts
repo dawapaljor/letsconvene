@@ -27,9 +27,10 @@ export interface PageSection {
    */
   title_size?: string;
   content: string;
-  list: string;
-  buttons: LinkButton[] & { length: 0 | 1 | 2};
-  image: string;
+  list?: string;
+  lists?: string[];
+  buttons?: LinkButton[] & { length: 0 | 1 | 2};
+  image?: string;
   image_position?: "top" | "bottom" | "left" | "right";
   
 };

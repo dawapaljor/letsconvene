@@ -7,6 +7,9 @@ import { getEntry } from "astro:content";
 
 const { logo } = config.site;
 const entry = await getEntry("pages", "404");
+if (!entry) {
+  throw new Error("404 page not found");
+}
 const { Content } = await entry.render();
 ---
 
