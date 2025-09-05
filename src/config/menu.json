@@ -4,19 +4,13 @@
       "name": "Home",
       "url": "/"
     },
-
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        }
-
-      
-      ]
+      "name": "Why Convene?",
+      "url": "/"
+    },
+    {
+      "name": "About Us",
+      "url": "/about"
     }
   ],
 
@@ -31,3 +25,5 @@
     }
   ]
 }
+
+

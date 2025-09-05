@@ -4,17 +4,17 @@
 banner:
   title: 'Simply Connect</span>'
   title_size: "text-4xl md:text-6xl"
-  content: "Tired of looking for the messaging app everyone is using? Chat with Convene"  
+  content: "Need to chat securely without sharing your personal information, chat with Convene in your current browser!"  
   image: /images/convene-encrypted-chat-messaging.webp
   lists: 
-    - No Phone number
-    - No account setup
-    - No app
+    - Secure
+    - Instant
+    - Effortless
   buttons:
-    - label: Request Access
+    - label: Try It
       href: "info@letsconvene.im"
       target: "_blank"
-      icon: mail
+      icon: bell
       addClasses: "w-full bg-gray-900 text-white hover:bg-accent dark:border-white/10 dark:border"
   
 
@@ -90,6 +90,68 @@ testimonial:
       rating: four
       content: "You don’t have to believe me, but you should believe in this product!"
 
+
+## Pricing
+pricing:
+  title: "Choose Your <span class='text-accent'>Plan</span>"
+  description: "Select the perfect plan for your organization's secure communication needs."
+  pricing_tiers:
+    - title: "Free"
+      price: "0"
+      period: "forever"
+      description: "Perfect for individuals and small groups"
+      features:
+        - "Unlimited secure chats"
+        - "End-to-end encryption"
+        - "File sharing up to 100MB"
+        - "Browser-based access"
+        - "No account required"
+        - "Community support"
+      button:
+        label: "Get Started"
+        href: "https://letsconvene.im"
+        color: "primary"
+        icon: "arrow-right"
+      icon: "users"
+    - title: "Organization"
+      price: "300"
+      period: "month"
+      description: "Ideal for organizations and businesses"
+      features:
+        - "Everything in Free"
+        - "Custom branding & domain"
+        - "99.99% uptime SLA"
+        - "Priority support"
+        - "Custom data retention"
+        - "Cloud or self-hosted"
+        - "Admin dashboard"
+        - "User management"
+      button:
+        label: "Contact Sales"
+        href: "mailto:sales@letsconvene.im"
+        color: "accent"
+        icon: "mail"
+      popular: true
+      icon: "building"
+    - title: "Enterprise"
+      price: "Custom"
+      period: "quote"
+      description: "Tailored solutions for large organizations"
+      features:
+        - "Everything in Organization"
+        - "Dedicated support team"
+        - "Custom integrations"
+        - "Advanced security features"
+        - "Compliance reporting"
+        - "Training & onboarding"
+        - "SLA guarantees"
+        - "24/7 support"
+      button:
+        label: "Get Quote"
+        href: "mailto:sales@letsconvene.im"
+        color: "primary"
+        icon: "phone"
+      icon: "shield"
 
 ## Call to Action
 call_to_action:

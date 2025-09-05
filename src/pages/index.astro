@@ -1,6 +1,7 @@
 ---
 import Section from "@/components/core/Section.astro";
 import Features from "@/components/Features.astro";
+import Pricing from "@/components/SimplePricing.astro";
 import Testimonial from "@/components/Testimonial.astro";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/layouts/partials/BigCard.astro";
@@ -13,6 +14,36 @@ if (!homepage) {
 // console.log(homepage);
 const { banner, sections, features, testimonial } = homepage.data;
 const call_to_action = homepage.data.call_to_action;
+
+// Dummy pricing data
+// const pricing = {
+//   title: "Choose Your <span class='text-accent'>Plan</span>",
+//   description: "Select the perfect plan for your organization's secure communication needs.",
+//   pricing_tiers: [
+//     {
+//       title: "Free",
+//       price: "20",
+//       period: "forever",
+//       description: "Perfect for individuals and small groups",
+//       features: [
+//         "Unlimited secure chats",
+//         "End-to-end encryption",
+//         "File sharing up to 100MB",
+//         "Browser-based access",
+//         "No account required",
+//         "Community support"
+//       ],
+//       button: {
+//         label: "Get Started",
+//         href: "https://letsconvene.im",
+//         color: "primary",
+//         icon: "arrow-right"
+//       },
+//       icon: "users"
+//     },
+    
+//   ]
+// };
 ---
 
 <Base>
@@ -33,6 +64,7 @@ const call_to_action = homepage.data.call_to_action;
   <!-- key features -->
   <Features features={features} />
   <!-- testimonial -->
+  <Pricing />
   <Testimonial testimonial={testimonial} />
   <!-- call to action -->
   <Cta {...call_to_action} />

@@ -1,0 +1,89 @@
+---
+import LinkButton from "@/components/LinkButton.astro";
+---
+
+<section class="px-5 py-20 xl:py-[120px]">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="h1 text-text mb-6">Our Pricing <span class="text-accent">Plan</span></h2>
+      <p class="text-text-secondary text-lg max-w-2xl mx-auto">Select the perfect plan for your organization's secure communication needs.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 max-w-6xl mx-auto">
+      <!-- Free Plan -->
+      <!-- <div class="relative bg-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-surface-contrast hover:border-accent/50">
+        <div class="flex justify-center mb-6">
+          <div class="w-16 h-16 rounded-full bg-accent/10" />
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-text mb-2">Free</h3>
+          <p class="text-text-secondary mb-6">Perfect for individuals and small groups</p>
+          
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-text">$0</span>
+            <span class="text-text-secondary">/forever</span>
+          </div>
+        </div>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start">
+            <span class="text-text-secondary">Unlimited secure chats</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-text-secondary">End-to-end encryption</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-text-secondary">File sharing up to 100MB</span>
+          </li>
+         
+        </ul>
+        
+        <div class="text-center">
+          <LinkButton href="https://letsconvene.im" class="w-full btn-primary">Get Started</LinkButton>
+        </div>
+      </div> -->
+
+      <!-- Organization Plan -->
+      <div class="relative bg-surface rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-accent shadow-accent/20">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold">
+            Pricing
+          </span>
+        </div>
+        
+        <div class="flex justify-center mb-6">
+          <div class="w-16 h-16 rounded-full bg-accent/10" />
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-text mb-2">First Year</h3>
+          <!-- <p class="text-text-secondary mb-6">First Year:</p> -->
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-text">$9,500</span>
+            <span class="text-text-secondary">(including Setup Fee)</span>
+          </div>
+          <br>
+          <h3 class="text-2xl font-bold text-text my-2">After First Year</h3>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-text">$9,500</span>
+            <span class="text-text-secondary">/month</span>
+            <span class="text-text-secondary px-5 ">or</span>
+            <span class="text-4xl font-bold text-text">$3,000</span>
+            <span class="text-text-secondary">/year (get 2 months free!)</span>
+          </div>
+        </div> 
+        
+        <!-- <ul class="space-y-4 mb-8">
+          <li class="flex items-start"><span class="text-text-secondary">Everything in Free</span></li>
+          <li class="flex items-start"><span class="text-text-secondary">Custom branding & domain</span></li>
+        </ul> -->
+        
+        <div class="text-center flex justify-center py-5">
+          <LinkButton href="https://letsconvene.im" class="w-2/5 btn-primary">Get Started</LinkButton>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
